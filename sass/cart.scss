@@ -1,0 +1,232 @@
+@charset 'utf-8';
+@import '../lib/hotcss-master/src/px2rem.scss';
+
+$designWidth : 750;
+$page-padding: px2rem(26);
+$car-bottom-h: px2rem(88);
+i.icon-selected{
+    background: #ec1a5a;
+    height: px2rem(42);
+    width: px2rem(42);
+    border-radius: 50%;
+    font-size: px2rem(30);
+    color: #fff;
+    text-align: center;
+    line-height: px2rem(42);
+    flex: 0 0 px2rem(42);
+}
+
+.top-hd{
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: #fff;
+    width: 100%;
+
+    .top-wrap{
+            background: linear-gradient(to right,#900758,#f81c5a);
+            position: relative;
+        h3{
+            text-align: center;
+            font-size: px2rem(32);
+            font-weight: 700;
+            height: px2rem(90);
+            line-height: px2rem(90);
+        }
+        .tp-shopcart-edit{
+            position: absolute;
+            top: px2rem(40);
+            right: px2rem(26);
+            font-size: px2rem(28);
+        }
+    }
+}
+.goods-list{
+    margin-top: px2rem(90);
+    margin-bottom: $car-bottom-h; 
+    .goods-item{
+        color: #333;
+        
+        .goods-item-hd{
+            height: px2rem(72);
+            border: 1px solid #ccc;
+            padding-left: $page-padding;
+            display: flex;
+            justify-content: start;
+            box-sizing: border-box;
+            align-items: center;
+
+            h4{
+                
+                font-size: px2rem(28);
+                padding-left: px2rem(14);
+
+            }
+        }
+        .goods-item-bd{
+            display: flex;
+            height: px2rem(214);
+            padding: 0 $page-padding;
+            justify-content: flex-start;
+            align-items: center;
+            .item-bd-l{
+               
+                padding-left: px2rem(14);
+                a{
+                    display: block;
+                    img{
+                        width: px2rem(180);
+                        height: px2rem(180);
+                        vertical-align: top;
+                    }
+                }
+            }
+            .item-bd-r{
+                flex: 1 0 ;
+                padding-left: px2rem(14);
+                height: px2rem(180);
+                .goods-item-name{
+                    font-size: px2rem(22);
+                    height: px2rem(54);
+                    line-height: px2rem(27);
+                    color: #000;
+                }
+                .goods-item-sku{
+                    height: px2rem(27);
+                    line-height: px2rem(27);
+                    font-size: px2rem(22);
+                    .sku-name{
+                        color: #666;
+                    }
+                    .sku-value{
+                        color: #ec1a5a;
+                    }
+                }
+                .yx-phoneicon{
+                    width: px2rem(68);
+                    height: px2rem(17);
+                    background: rgb(10, 120, 223);
+                    margin: px2rem(6) 0;
+                }
+                .goods-item-price{
+                    color: #ec1a5a;
+                    font-size: px2rem(30);
+                    height: px2rem(30);
+                    line-height: px2rem(30);
+                }
+                .goods-item-edit-wrap{
+                    height: px2rem(40);
+                    line-height: px2rem(40);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    .edit-count-wrap{
+                        font-size: px2rem(20);
+                        border: 1px solid #ccc;
+                        border-radius: px2rem(4);
+                        span{
+                            float: left;
+                            height: px2rem(35);
+                            line-height: px2rem(35);
+                            padding: 0 px2rem(12);
+                            border-left: 1px solid #ccc;
+                            &::first-child{
+                                border-left: none;
+                            }
+                        }
+                    }
+                    .edit-btn{
+                        font-size: px2rem(35);
+                    }
+                }
+            }
+        }
+    }
+    .cart-layer-sep{
+        height: px2rem(20);
+        background: #eee;
+    }
+}
+.goods-account-wrap{
+    height: $car-bottom-h;
+    width: 100%;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    bottom: px2rem(84);
+    z-index: 999;
+    padding-left: $page-padding; 
+    box-sizing: border-box;
+    .account-l{
+        float: left;
+        font-size: px2rem(32);
+        line-height: $car-bottom-h;
+        
+        i{
+            display: inline-block;
+        }
+        span{
+            margin-left: px2rem(14);
+        }
+    }
+    .account-r{
+        float: right;
+        display: flex;
+        font-size: px2rem(28);
+
+        .account-sum{
+            width: px2rem(200);
+            height: $car-bottom-h;
+            line-height: $car-bottom-h;
+            font-size: px2rem(24);
+            .price{
+                color: #ec1a5a;
+            }
+        }
+        .account-settle{
+            width: px2rem(222);
+            height: $car-bottom-h;
+            line-height: $car-bottom-h;
+            text-align: center;
+            background: linear-gradient(to right,#900758,#f81c5a);
+            color: #fff;
+
+        }
+    }
+}
+.site-footer{
+    font-size: px2rem(24);
+    position: fixed;
+    height: px2rem(84);
+    left: 0;
+    bottom: 0;
+    background: #171717;
+    width: 100%;
+    z-index: 1000;
+    color: #9b9b9b;
+    .footer-list{
+        display: flex;
+        justify-content: space-around;
+        align-items: space-around;
+        text-align: center;
+        .footer-list-item{
+            width: px2rem(72);
+            height: px2rem(72);
+            i{
+                position: relative;
+                display: block;
+                top: px2rem(6);
+                font-size: px2rem(40);
+                line-height: px2rem(40);
+                margin-bottom: px2rem(6);
+            }
+            span{
+                font-size: px2rem(24);
+                line-height: px2rem(28);
+            }
+        }
+        .cur{
+            color: #900758;
+        }
+    }
+}
